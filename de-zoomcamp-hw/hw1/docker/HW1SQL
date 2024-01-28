@@ -1,0 +1,40 @@
+SELECT *, (lpep_dropoff_datetime-lpep_pickup_datetime) as time_diff
+FROM public.green_taxi_data
+ORDER BY time_diff DESC
+LIMIT 100;
+
+SELECT COUNT(*)
+FROM public.green_taxi_data
+WHERE date(lpep_pickup_datetime)='2019-09-18' AND date(lpep_dropoff_datetime)='2019-09-18'
+LIMIT 100;
+
+SELECT * 
+FROM public.zones 
+WHERE "Zone"='Astoria'
+LIMIT 100;
+
+SELECT * 
+FROM public.zones 
+WHERE "LocationID"=132
+LIMIT 100;
+
+WITH tbl as (SELECT * 
+FROM 
+public.green_taxi_data as g
+LEFT JOIN public.zones as z
+ON g."PULocationID" = z."LocationID")
+SELECT "Borough", SUM(total_amount) as sum_amounts
+FROM tbl
+WHERE date(lpep_pickup_datetime)='2019-09-18'
+GROUP BY "Borough"
+HAVING SUM(total_amount)>50000
+
+WITH tbl as (SELECT * 
+FROM 
+public.green_taxi_data as g
+LEFT JOIN public.zones as z
+ON g."PULocationID" = z."LocationID")
+SELECT *
+FROM tbl
+WHERE "LocationID"=7
+ORDER BY tip_amount DESC
