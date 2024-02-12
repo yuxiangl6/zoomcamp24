@@ -1,0 +1,42 @@
+-- Q1
+SELECT COUNT(*) FROM `focused-elysium-411215.ny_taxi.green_cab_data`;
+
+
+-- Q2 External table
+SELECT COUNT(DISTINCT PULocationID) FROM `focused-elysium-411215.ny_taxi.green_cab_data`;
+
+-- Q2 Non-partitioned table
+CREATE OR REPLACE TABLE `focused-elysium-411215.ny_taxi.green_nonpartitioned_tripdata`
+AS SELECT * FROM `focused-elysium-411215.ny_taxi.green_cab_data`;
+
+-- Q2 Count distinct PULocationID
+SELECT COUNT(DISTINCT PULocationID) FROM `focused-elysium-411215.ny_taxi.green_nonpartitioned_tripdata`;
+
+
+-- Q3
+SELECT COUNT(*)
+FROM `focused-elysium-411215.ny_taxi.green_nonpartitioned_tripdata`
+WHERE fare_amount=0;
+
+
+
+-- Q4 Partitioned by lpep_dropoff_datetime only
+CREATE OR REPLACE TABLE `focused-elysium-411215.ny_taxi.green_partitioned_tripdata`
+PARTITION BY DATE(lpep_dropoff_datetime) AS SELECT * FROM `focused-elysium-411215.ny_taxi.green_cab_data`;
+
+-- Q4 Partitioned by lpep_dropoff_datetime, clustered by PULocationID
+CREATE OR REPLACE TABLE `focused-elysium-411215.ny_taxi.green_partitioned_clustered_tripdata`
+PARTITION BY DATE(lpep_dropoff_datetime)
+CLUSTER BY PULocationID AS (
+  SELECT * FROM `focused-elysium-411215.ny_taxi.green_cab_data`;
+);
+
+-- Q5 Partitioned and clustered
+SELECT DISTINCT PULocationID
+FROM `focused-elysium-411215.ny_taxi.green_partitioned_clustered_tripdata`
+WHERE DATE(lpep_dropoff_datetime) BETWEEN '2022-06-01' AND '2022-06-30';
+
+-- Q5 Non-partitioned
+SELECT DISTINCT PULocationID
+FROM `focused-elysium-411215.ny_taxi.green_nonpartitioned_tripdata`
+WHERE DATE(lpep_dropoff_datetime) BETWEEN '2022-06-01' AND '2022-06-30';
