@@ -48,9 +48,9 @@ FROM
     trip_data
         JOIN taxi_zone
             ON trip_data.PULocationID = taxi_zone.location_id
+WHERE
+    trip_data.tpep_pickup_datetime > ((SELECT MAX(tpep_pickup_datetime) FROM trip_data) - INTERVAL '17' HOUR)
 GROUP BY
-    taxi_zone.Zone, tpep_pickup_datetime
-HAVING
-    trip_data.tpep_pickup_datetime > (MAX(trip_data.tpep_pickup_datetime)- INTERVAL '17' HOUR)
+    taxi_zone.Zone
 ORDER BY last_17_hr_pickup_cnt DESC
-LIMIT 10;   
+LIMIT 10;    
