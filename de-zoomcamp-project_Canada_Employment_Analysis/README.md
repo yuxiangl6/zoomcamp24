@@ -7,9 +7,9 @@ before developing policies to help the citizens. They have narrowed down 3 broad
 3) Companies in which city is likely to hire candidates full-time in 2019?
 
 As a data engineer and analyst, the delieverables are
-1. Develop a dashboard with 3 tiles by
-   - Selecting a dataset of interest (see Datasets)
-   - Creating a pipeline for processing this dataset and putting it to a datalake
-   - Creating a pipeline for moving the data from the lake to a data warehouse
-   - Transforming the data in the data warehouse: prepare it for the dashboard
-   - Building a dashboard to visualize the data
+Develop a dashboard with 3 tiles by
+   - Selecting a dataset of interest (see Datasets) (refer to https://github.com/yuxiangl6/zoomcamp24/tree/main/de-zoomcamp-project_Canada_Employment_Analysis/mage-orchestrator)
+   - Creating a pipeline for processing this dataset and putting it to a datalake (refer to https://github.com/yuxiangl6/zoomcamp24/tree/main/de-zoomcamp-project_Canada_Employment_Analysis/mage-orchestrator)
+   - Creating a pipeline for moving the data from the lake to a data warehouse (refer to https://github.com/yuxiangl6/zoomcamp24/tree/main/de-zoomcamp-project_Canada_Employment_Analysis/bq-data-warehouse)
+   - Transforming the data in the data warehouse: prepare it for the dashboard (refer to https://github.com/yuxiangl6/zoomcamp24/tree/main/de-zoomcamp-project_Canada_Employment_Analysis/mage-orchestrator)
+   - Building a dashboard to visualize the data (refer to https://github.com/yuxiangl6/zoomcamp24/tree/main/de-zoomcamp-project_Canada_Employment_Analysis/Canada_Employment_Analysis_dashboard)
