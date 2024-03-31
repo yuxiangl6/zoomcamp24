@@ -32,6 +32,9 @@ Data load output:
 
 
 
+
+
+
 (2) TRANSFORMATION PROCESS
 I re-defined the schema from pandas to spark, created spark dataframes and dropped `decimal` column as it doesn't faciliate much in data analysis.
 
