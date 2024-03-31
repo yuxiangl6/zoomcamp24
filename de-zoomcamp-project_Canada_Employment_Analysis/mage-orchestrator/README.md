@@ -3,8 +3,12 @@ This is to store all files pertaining to orchestration via Mage.
 Essentially this is how the pipeline orchestration looks like.
 ![tree](https://github.com/yuxiangl6/zoomcamp24/assets/143888207/101df3c9-0261-4f27-ba64-e9966caa6fae)
 
+
+
 It's scheduled to run on the 1st calendar day of every year.
 ![pipeline-scheduled-run](https://github.com/yuxiangl6/zoomcamp24/assets/143888207/bd15b414-b089-405b-9af1-cb069005252a)
+
+
 
 
 (1) DATA LOAD PROCESS
@@ -23,6 +27,9 @@ Data load output:
 
 
 
+
+
+
 (2) TRANSFORMATION PROCESS
 I re-defined the schema from pandas to spark, created spark dataframes and dropped `decimal` column as it doesn't faciliate much in data analysis.
 
@@ -32,6 +39,10 @@ Refer to data-spark-transform.py for script.
 
 Data transform output:
 ![data-spark-transform-output](https://github.com/yuxiangl6/zoomcamp24/assets/143888207/66907951-661f-4040-8c66-d3b82c7ef390)
+
+
+
+
 
 
 (3) DATA EXPORT TO GCP STORAGE
