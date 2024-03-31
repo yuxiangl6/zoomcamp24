@@ -25,6 +25,8 @@ so it's not significant
 Refer to data-load.py for script.
 
 Data load output:
+
+
 ![data-load-output](https://github.com/yuxiangl6/zoomcamp24/assets/143888207/a2af9619-38ad-41fa-a7d3-3767078d748c)
 
 
