@@ -13,7 +13,7 @@ It's scheduled to run on the 1st calendar day of every year.
 
 
 
-(1) DATA LOAD PROCESS
+(1) DATA LOAD PROCESS:
 I've selected this dataset "https://github.com/thefabscientist/Waterloo-DS3-Group-1-Project/blob/main/CanadaLabourData.csv.gz?raw=true", 
 which contains the Canada Labor Data from 1970s to 2020.
 
@@ -37,7 +37,7 @@ Data load output:
 
 
 
-(2) TRANSFORMATION PROCESS
+(2) TRANSFORMATION PROCESS:
 I re-defined the schema from pandas to spark, created spark dataframes and dropped `decimal` column as it doesn't faciliate much in data analysis.
 
 To ease data export process later, I converted the spark dataframes back to pandas, as it's easier to do so via pandas.
@@ -52,7 +52,7 @@ Data transform output:
 
 
 
-(3) DATA EXPORT TO GCP STORAGE
+(3) DATA EXPORT TO GCP STORAGE:
 I published the data to GCP, using field `ref_date` as partitions 
 
 Refer to `data-export-gcs-partitioned.py` for script.
