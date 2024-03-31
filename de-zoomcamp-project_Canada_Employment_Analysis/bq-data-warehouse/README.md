@@ -30,4 +30,3 @@ Row count SQL query for data check:
 
 
 
-Data schema:
