@@ -1,6 +1,8 @@
 This is to store all files pertaining to orchestration via Mage.
 
 Essentially this is how the pipeline orchestration looks like.
+
+
 ![tree](https://github.com/yuxiangl6/zoomcamp24/assets/143888207/101df3c9-0261-4f27-ba64-e9966caa6fae)
 
 
