@@ -7,7 +7,7 @@ Essentially this is how the pipeline orchestration looks like.
 
 
 
-It's scheduled to run on the 1st calendar day of every year.
+It's scheduled to run on the 1st calendar day of every year (i.e. batch processing)
 ![pipeline-scheduled-run](https://github.com/yuxiangl6/zoomcamp24/assets/143888207/bd15b414-b089-405b-9af1-cb069005252a)
 
 
