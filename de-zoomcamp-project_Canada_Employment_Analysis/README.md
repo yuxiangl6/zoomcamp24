@@ -13,3 +13,7 @@ Develop a dashboard with 3 tiles by
    - Creating a pipeline for moving the data from the lake to a data warehouse (refer to https://github.com/yuxiangl6/zoomcamp24/tree/main/de-zoomcamp-project_Canada_Employment_Analysis/bq-data-warehouse)
    - Transforming the data in the data warehouse: prepare it for the dashboard (refer to https://github.com/yuxiangl6/zoomcamp24/tree/main/de-zoomcamp-project_Canada_Employment_Analysis/mage-orchestrator)
    - Building a dashboard to visualize the data (refer to https://github.com/yuxiangl6/zoomcamp24/tree/main/de-zoomcamp-project_Canada_Employment_Analysis/Canada_Employment_Analysis_dashboard)
+
+Pipelines to be developed in cloud using Codespace and orchestrated using Mage.
+Data to be stored in GCP (Storage and Big Query)
+Dashboard to be built using Google Looker Studio.
